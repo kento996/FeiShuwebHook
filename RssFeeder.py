@@ -11,7 +11,6 @@ import time
 #检查是否是今日的rss更新
 def check_rss_update(url:str)-> dict:
     Newfeed=feedparser.parse(url)
-
     data={}
     #计算文章的更新时间
     for i in range(len(Newfeed.entries)):
